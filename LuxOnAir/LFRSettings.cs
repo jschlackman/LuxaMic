@@ -82,7 +82,7 @@ namespace LuxOnAir
                 // Turn off the lights before shutting down
                 foreach (IDevice device in devices)
                 {
-                    device.SetColor(LedTarget.All, new LuxaforSharp.Color(0, 0, 0));
+                    device.SetColor(LedTarget.All, new LuxaforSharp.Color(0, 0, 0), null);
                     device.Dispose();
                 }
             }
@@ -99,7 +99,7 @@ namespace LuxOnAir
                 foreach (IDevice device in devices)
                 {
                     // Set the required color with a short fade time
-                    device.SetColor(LedTarget.All, new LuxaforSharp.Color(color.R, color.G, color.B), 10);
+                    device.SetColor(LedTarget.All, new LuxaforSharp.Color(color.R, color.G, color.B), null);
                 }
             }
         }
