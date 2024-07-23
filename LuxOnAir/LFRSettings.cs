@@ -115,7 +115,7 @@ namespace LuxOnAir
                 foreach (IDevice device in devices)
                 {
                     // Wave the required color
-                    device.Wave(WaveType.Long, new LuxaforSharp.Color(color.R, color.G, color.B), 10, 0);
+                    device.Wave(WaveType.OverlappingLong, new LuxaforSharp.Color(color.R, color.G, color.B), 10, 2);
                 }
             }
         }
@@ -147,7 +147,7 @@ namespace LuxOnAir
             foreach (IDevice device in devices)
             {
                 // Blink the current color once with a longer fade time
-                device.Blink(LedTarget.All, new LuxaforSharp.Color(currentColor.R, currentColor.G, currentColor.B), 20, 1);
+                device.Blink(LedTarget.All, new LuxaforSharp.Color(currentColor.R, currentColor.G, currentColor.B), 20, 2);
             }
         }
 
